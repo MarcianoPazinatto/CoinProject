@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='src/css/base.css')}}">
+    <meta charset="UTF-8">
+    <title>Coins_Compare</title>
+</head>
+<body>
+    <ul>
+
+        <li>{{ response.ask }}</li>
+        <li>{{ response.name }}</li>
+        <li>{{ response.high }}</li>
+        <li>{{ response.low }}</li>
+
+    </ul>
+</body>

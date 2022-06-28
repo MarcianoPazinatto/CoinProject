@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Hello World</h1>
-    <form method="post" action="/coins/coin_comparator">
+    <form method="post" action="/coins/">
         <label for="coins_one">Choose a coin:</label>
         <select name="coins_one" id="coins_one">
                 <option value="BRL">Real</option>
@@ -21,6 +21,7 @@
         </select>
 
         <input type="submit" name="submit"/>
+        <div>{{ response }}</div>
     </form>
 
 
