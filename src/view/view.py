@@ -17,7 +17,7 @@ class CoinModel:
         self.second_coin = second_coin
 
 
-@coin_view.post(f"/coin_comparator")
+@coin_view.post(f"/comparator")
 async def root(request: Request, coins_one: str = Form(...), coins_two: str = Form(...)):
     print(coins_one)
     print(coins_two)
@@ -25,6 +25,12 @@ async def root(request: Request, coins_one: str = Form(...), coins_two: str = Fo
     return templates.TemplateResponse("basicform.html", {"request": request,
                                                          "response": response})
 
-@coin_view.get("/")
+
+@coin_view.get("/coin_comparator")
 async def home(request: Request):
     return templates.TemplateResponse("coin_comparator.html", {"request": request})
+
+
+@coin_view.get("/menu")
+async def home(request: Request):
+    return templates.TemplateResponse("base.html", {"request": request})

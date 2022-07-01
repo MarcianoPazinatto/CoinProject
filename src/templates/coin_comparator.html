@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='src/css/base.css')}}">
@@ -7,7 +9,7 @@
 </head>
 <body>
     <h1>Hello World</h1>
-    <form method="post" action="/coins/">
+    <form method="post" action="/coins/comparator">
         <label for="coins_one">Choose a coin:</label>
         <select name="coins_one" id="coins_one">
                 <option value="BRL">Real</option>
@@ -27,3 +29,4 @@
 
 </body>
 </html>
+{% endblock %}
