@@ -2,7 +2,7 @@
 body {
   background: #fafafa;
   color: #33333a;
-  padding-top: 70px;
+  padding-top: 120px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,6 +17,13 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: line-through;
 }
 
+.col-2 {
+    text-align: center;
+    border: 4px solid #2c2f3f;
 
+}
 
+.col-3 {
+    border: 4px solid #b0e0e6;
+}
 

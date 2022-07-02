@@ -10,22 +10,28 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div class="container">
+    <h2><span> {{ response.compare_name }}</span></h2>
+
+</div>
+<div class="container">
       <div class="row">
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
+    <div class="col-2 col-sm-2">Moeda</div>
+    <div class="col-2 col-sm-2">Valor Atual</div>
+    <div class="col-2 col-sm-2">Em relação ao</div>
+    <div class="col-2 col-sm-2">Maior valor hoje</div>
+    <div class="col-2 col-sm-2">Menor valor hoje</div>
 
     <!-- Force next columns to break to new line at md breakpoint and up -->
     <div class="w-100 d-none d-md-block"></div>
 
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
-    <div class="col-3 col-sm-2">.col-6 .col-sm-2</div>
+    <div class="col-3 col-sm-2">{{ response.current_name }}</div>
+    <div class="col-3 col-sm-2">{{ response.ask }}</div>
+    <div class="col-3 col-sm-2">{{ response.compare_name }}</div>
+    <div class="col-3 col-sm-2">{{ response.high }}</div>
+    <div class="col-3 col-sm-2">{{ response.low }}</div>
 
+</div>
   </div>
     <ul>
 
@@ -36,5 +42,6 @@
         <li>Menor variação hoje: {{ response.low }}</li>
 
     </ul>
+
 </body>
 {% endblock %}'
