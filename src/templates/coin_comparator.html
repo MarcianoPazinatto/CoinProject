@@ -8,18 +8,20 @@
     <title>Coins_Compare</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Compare duas moedas:</h1>
     <form method="post" action="/coins/comparator">
         <label for="coins_one">Choose a coin:</label>
         <select name="coins_one" id="coins_one">
                 <option value="BRL">Real</option>
                 <option value="USD">Dolar</option>
+                <option value="EUR">Euro</option>
         </select>
 
         <label for="coins_two">Choose a coin:</label>
         <select name="coins_two" id="coins_two">
             <option value="BRL">Real</option>
             <option value="USD">Dolar</option>
+            <option value="EUR">Euro</option>
         </select>
 
         <input type="submit" name="submit"/>
