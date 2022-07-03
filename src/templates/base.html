@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 
     <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='src/css/base.css')}}">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,17 @@
     <title>CoinsViewer</title>
 </head>
 <body>
+<nav id="navbar" class="navbar navbar-expand-lg ">
+  <a id="menu" class="navbar-brand" href="#">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/coins/coin_comparator">Comparador</a>
+    </div>
+  </div>
+</nav>
     {% block content %}{% endblock %}
 </body>
 </html>
