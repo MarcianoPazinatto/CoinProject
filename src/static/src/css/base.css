@@ -1,45 +1,5 @@
-
-body {
-  background: #fafafa;
-  color: #33333a;
-  padding-top: 120px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #323232;
-}
-
-.main-color {
-  background-color: #0e76a8 ;
-}
-
-.strike-through-td {
-    text-decoration: line-through;
-}
-
-.col-2{
-    color: #fffafa;
-    background: #000000;
-    font-size: 20px;
-    text-align: center;
-    border: 4px solid #ffffff;
-    border-radius: 1%;
-    font-weight: bold;
-
-}
-
-.col-3 {
-    text-align: right;
-    border: 4px solid #b0e0e6;
-    border-radius: 1%;
-}
-
-.espaco {
-    padding: 50px;
-}
-
 nav, nav a, #navbar, .nav-item, .nav-link, .active{
-    background: #191970;
+    background: #000000;
     color: white;
     font-weight: bold;
 }
@@ -50,12 +10,105 @@ nav, nav a, #navbar, .nav-item, .nav-link, .active{
 
 .menu-nav-active{
     overflow: hidden;
+    color: black;
 }
 
+
+
+
+body {
+text-align: center;
+  background: #fafafa;
+  color: #33333a;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-align: center;
+  color: #323232;
+}
+
+.main-color {
+text-align: center;
+  background-color: #0e76a8 ;
+}
+
+.strike-through-td {
+text-align: center;
+    text-decoration: line-through;
+}
+
+#resposta{
+  padding-left:50px;
+  margin: auto;
+  width: 60%;
+}
+
+.col-2{
+    padding-left:50px;
+    color: #fffafa;
+    background: #000000;
+    font-size: 20px;
+    text-align: center;
+    border: 4px solid #000000;
+    border-radius: 1%;
+    font-weight: bold;
+
+}
+
+.col-3 {
+    padding-left:50px;
+    align-content: center;
+    text-align: center;
+    border: 4px solid #000000;
+    border-radius: 1%;
+}
+
+
+
+
 #selecao {
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+    align-content: center;
+    text-align: center;
     padding-top: 50px;
-    padding-left: 180px;
-    border: 4px solid #b0e0e6;
-    height:120px;
+    border: 4px solid #000000;
+    height:170px;
     width:700px;
+    border-radius: 10px;
+}
+
+.select_coin{
+    padding:50px;
+    align-content: center;
+    text-align: center;
+    color: red;
+}
+
+#titulo{
+    padding-top: 100px;
+}
+
+#a button {
+	background: #B9DFFF;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
+
+.row{
+    padding-top: 30px;
+    padding-bottom:30px;
+}
+
+#resposta{
+ padding-bottom:30px;
+}
+
+.container{
+     padding-top:30px;
 }

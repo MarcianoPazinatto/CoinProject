@@ -7,7 +7,7 @@ from src.model.coins_model import Coin
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-coin_view = APIRouter(prefix="/coins")
+coin_view = APIRouter()
 templates = Jinja2Templates(directory="src/templates/")
 
 
@@ -32,6 +32,6 @@ async def home(request: Request):
     return templates.TemplateResponse("coin_comparator.html", {"request": request})
 
 
-@coin_view.get("/menu")
+@coin_view.get("/")
 async def home(request: Request):
     return templates.TemplateResponse("base.html", {"request": request})
