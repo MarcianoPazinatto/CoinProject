@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import requests
 
 
@@ -21,8 +23,11 @@ def get_coins(coin_one, coin_two):
     other_response = requests.get(f'https://economia.awesomeapi.com.br/last/{coins[1]}-{coins[0]}')
     other_response = other_response.json()
     response = response.json()
+    today = datetime.today().strftime('%d/%m/%Y')
+    print(response.values)
     for i in response.values():
         data = dict()
+        data['date'] = today
         data['ask'] = i.get('ask')
         name = i.get('name').split('/')
         data['current_name'] = name[0]
@@ -32,6 +37,7 @@ def get_coins(coin_one, coin_two):
     print(data)
     for i in other_response.values():
         other_data = dict()
+        other_data['date'] = today
         other_data['ask'] = i.get('ask')
         name = i.get('name').split('/')
         other_data['current_name'] = name[0]
