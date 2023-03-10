@@ -19,11 +19,9 @@ class CoinModel:
 
 @coin_view.post(f"/comparator")
 async def root(request: Request, coins_one: str = Form(...), coins_two: str = Form(...)):
-    print(coins_one)
-    print(coins_two)
+
     response = get_coins(coins_one, coins_two)
-    print(response[0])
-    print(response[1])
+
     return templates.TemplateResponse("basicform.html", {"request": request,
                                                          "response": response[0],
                                                          "other_response": response[1]})
