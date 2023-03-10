@@ -2,7 +2,7 @@
 
 ## Executando o projeto 
     
-    python run.py    
+    python app.py    
 
 ## Porta executada
 

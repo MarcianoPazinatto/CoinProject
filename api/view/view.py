@@ -1,14 +1,14 @@
 import requests
 from fastapi import APIRouter, Request, Form
 from fastapi.encoders import jsonable_encoder
-from src.controller.coin_action import get_coins
-from src.model.coins_model import Coin
+from api.controller.coin_action import get_coins
+from api.model.coins_model import Coin
 
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 coin_view = APIRouter()
-templates = Jinja2Templates(directory="src/templates/")
+templates = Jinja2Templates(directory="api/templates/")
 
 
 class CoinModel:
