@@ -9,5 +9,5 @@ app.include_router(coin_view)
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
 
 if __name__ == '__main__':
-    uvicorn.run(app, port=4000, debug=True)
+    uvicorn.run(app)
 
