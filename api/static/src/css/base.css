@@ -38,13 +38,6 @@ h1, h2, h3, h4, h5, h6 {
       width: 60%;
 }
 
-#resposta2{
-    #F0FFFF
-      padding-left:50px;
-      margin: auto;
-      width: 60%;
-}
-
 .col-2{
 
     color: #fffafa;
@@ -84,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #titulo{
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 
