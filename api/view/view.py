@@ -27,7 +27,7 @@ async def root(request: Request, coins_one: str = Form(...), coins_two: str = Fo
                                                          "other_response": response[1]})
 
 
-@coin_view.get("/coin_comparator")
+@coin_view.get("/")
 async def home(request: Request):
     return templates.TemplateResponse("coin_comparator.html", {"request": request})
 
