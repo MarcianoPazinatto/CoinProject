@@ -8,21 +8,21 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <div>
-        <div id="titulo">
+<div>
+    <div id="titulo">
         <h1>Escolha e compare duas moedas:</h1>
         <form id="selecao" method="post" action="/comparator">
             <div id="select_coin">
                 <label for="coins_one">Escolha a moeda:</label>
                 <select name="coins_one" id="coins_one">
-                        <option value="BRL">Real</option>
-                        <option value="USD">Dolar</option>
-                        <option value="EUR">Euro</option>
-                        <option value="ARS">Peso Argentino</option>
-                        <option value="GBP">Libra Esterlina</option>
-                        <option value="JPY">Iene Japonês</option>
-                        <option value="CHF">Franco Suíço</option>
-                        <option value="AUD">Dólar Australiano</option>
+                    <option value="BRL">Real</option>
+                    <option value="USD">Dolar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="ARS">Peso Argentino</option>
+                    <option value="GBP">Libra Esterlina</option>
+                    <option value="JPY">Iene Japonês</option>
+                    <option value="CHF">Franco Suíço</option>
+                    <option value="AUD">Dólar Australiano</option>
                 </select>
 
                 <label for="coins_two">Escolha a moeda:</label>
@@ -41,67 +41,78 @@
 
             </div>
         </form>
+
+        <br>
+        <br>
     </div>
-
-
 
 
     <div id="resposta">
 
         <div class="container">
 
-        <h2><span> A cada {{ response.current_name }}, podemos comprar : ${{ response.ask }} de {{ other_response.current_name }}</span></h2>
+            <h4><span> A cada {{ response.current_name }}, podemos comprar : ${{ response.ask }} de {{ other_response.current_name }}</span>
+            </h4>
 
         </div>
 
-                  <div class="row">
-                    <div class="col-2 col-sm-2">Data</div>
-                    <div class="col-2 col-sm-2">Moeda</div>
-                    <div class="col-2 col-sm-2">Valor Atual</div>
-                    <div class="col-2 col-sm-2">Em relação ao</div>
-                    <div class="col-2 col-sm-2">Maior valor hoje</div>
-                    <div class="col-2 col-sm-2">Menor valor hoje</div>
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th>Data</th>
+                <th>Moeda</th>
+                <th>Valor Atual</th>
+                <th>Em relação ao</th>
+                <th>Maior valor hoje</th>
+                <th>Menor valor hoje</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ response.date }}</td>
+                <td>{{ response.current_name }}</td>
+                <td>{{ response.ask }}</td>
+                <td>{{ response.compare_name }}</td>
+                <td>${{ response.high }}</td>
+                <td>${{ response.low }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="container">
 
-                    <!-- Force next columns to break to new line at md breakpoint and up -->
-                    <div class="w-100"></div>
+            <h4><span> A cada {{ other_response.current_name }}, podemos comprar : ${{ other_response.ask }} de {{ response.current_name }}</span>
+            </h4>
 
-                    <div class="col-3 col-sm-2">{{ response.date }}</div>
-                    <div class="col-3 col-sm-2">{{ response.current_name }}</div>
-                    <div class="col-3 col-sm-2">${{ response.ask }}</div>
-                    <div class="col-3 col-sm-2">{{ response.compare_name }}</div>
-                    <div class="col-3 col-sm-2">${{ response.high }}</div>
-                    <div class="col-3 col-sm-2">${{ response.low }}</div>
-
-            </div>
-
-            <h2><span> A cada {{ other_response.current_name }}, podemos comprar : ${{ other_response.ask }} de {{ response.current_name }}</span></h2>
-
-
-                  <div class="row">
-                    <div class="col-2 col-sm-2">Data</div>
-                    <div class="col-2 col-sm-2">Moeda</div>
-                    <div class="col-2 col-sm-2">Valor Atual</div>
-                    <div class="col-2 col-sm-2">Em relação ao</div>
-                    <div class="col-2 col-sm-2">Maior valor hoje</div>
-                    <div class="col-2 col-sm-2">Menor valor hoje</div>
-
-                    <!-- Force next columns to break to new line at md breakpoint and up -->
-                    <div class="w-200"></div>
-
-                    <div class="col-3 col-sm-2">{{ other_response.date }}</div>
-                    <div class="col-3 col-sm-2">{{ other_response.current_name }}</div>
-                    <div class="col-3 col-sm-2">${{ other_response.ask }}</div>
-                    <div class="col-3 col-sm-2">{{ other_response.compare_name }}</div>
-                    <div class="col-3 col-sm-2">${{ other_response.high }}</div>
-                    <div class="col-3 col-sm-2">${{ other_response.low }}</div>
-
-                  </div>
-            </div>
-
-
-
-
+        </div>
     </div>
+
+    <div id="resposta2">
+
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Data</th>
+                <th>Moeda</th>
+                <th>Valor Atual</th>
+                <th>Em relação ao</th>
+                <th>Maior valor hoje</th>
+                <th>Menor valor hoje</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ other_response.date }}</td>
+                <td>{{ other_response.current_name }}</td>
+                <td>{{ other_response.ask }}</td>
+                <td>{{ other_response.compare_name }}</td>
+                <td>${{ other_response.high }}</td>
+                <td>${{ other_response.low }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 </body>
 {% endblock %}'
